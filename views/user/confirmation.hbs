@@ -1,0 +1,45 @@
+<head>
+  <style type="text/css">
+    body {
+      background-image: none;
+      background-color: black;
+
+    }
+  </style>
+</head>
+
+  <form action="/user/confirm-downline" method="post" id="checkout-form">
+    <div class="row">
+
+      <div class="col-xs-6 col-xs-offset-2" style="display: none">
+        <div class="form-group">
+          <label for="confirm"></label>
+          <input type="text" id="confirm" name="confirm" placeholder="confirm: Yes or No" class="form-control">
+        </div>
+      </div>
+
+      <div class="col-xs-6 col-xs-offset-3" style="">
+        <div class="form-group">
+          <label for="comment"></label>
+          <input type="text" id="comment" name="comment" placeholder="Enter Your Comment Here" class="form-control">
+        </div>
+      </div>
+
+      </div>
+
+    <div class="text-center">
+    <button type="submit" class="btn btn-success btn-lg" name="button">
+    <span class="fa fa-unlock"></span> Confirm</button>
+    </div>
+
+  </form>
+
+  <br>
+  <div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+  <div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>NOTE:</strong> Only confirm downline if you are sure you received payment.
+  </div>
+  </div>
+  </div>

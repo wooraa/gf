@@ -1,0 +1,147 @@
+<div class="row user-info"><!-- Row Containing User's Up & Downline -->
+
+<!-- User's Upline -->
+	{{# if account.upline.account_name }}
+	<div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
+			<div class="well upline">
+				<h3 class="text-center"><span class="fa fa-office"></span>
+				<strong>Your Upline is</strong>: {{ account.upline.user_name }}
+				</h3>
+
+					<p>
+
+						<strong>Bank</strong>: {{ account.upline.bank_name }}<br>
+						<strong>Account Name</strong>: {{ account.upline.account_name }}<br>
+						<strong>Account Number</strong>: {{ account.upline.account_number }}<br>
+						<strong>Phone Number</strong>: {{ account.upline.phone_number }}<br>
+						<strong>Plan</strong>: {{ account.upline.plan }}<br>
+
+						{{# if account.upline.time }}
+						<strong>Pay Before</strong>: {{ account.upline.time }}<br>
+						{{ else }}
+						{{/if}}
+
+						{{# if account.upline.message }}
+						<strong>Message</strong>: {{ account.upline.message }}<br>
+						{{ else }}
+						{{/if}}
+
+						{{# if account.upline.confirmed }}
+						<strong>Confirmed</strong>: {{ account.upline.confirmed }}<br>
+						{{else}}
+						{{/if}}
+
+					</p>
+
+					{{# if account.upline.msg_1 }}
+					<div class="alert alert-success alert-dismissible" role="alert">
+					    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					    <span aria-hidden="true">&times;</span></button>
+					    <strong>NOTE:</strong> {{ account.upline.msg_1 }}
+  					</div>
+  					{{ else }}
+  					{{/if}}
+
+  					{{# if account.upline.msg_2 }}
+  					<div class="alert alert-warning alert-dismissible" role="alert">
+					    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					    <span aria-hidden="true">&times;</span></button>
+					    <strong>NOTE:</strong> {{ account.upline.msg_2 }}
+  					</div>
+  					{{ else }}
+  					{{/if}}
+
+  					{{# if account.upline.msg_3 }}
+  					<div class="alert alert-danger alert-dismissible" role="alert">
+					    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					    <span aria-hidden="true">&times;</span></button>
+					    <strong>NOTE:</strong> {{ account.upline.msg_3 }}
+  					</div>
+  					{{ else }}
+  					{{/if}}
+			</div><!-- End of User's Upline Well -->
+	</div>
+	{{ else }}
+	<div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
+	<div class="alert alert-info alert-dismissible" role="alert">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true" style="font-size: 30px; color: darkblue;">&times;</span></button>
+		 <strong>Y</strong>our time to get help starts ticking the moment you choose a plan.<br>Your upline will appear here after some time, be patient.
+	</div>
+  	</div>
+	{{/if}}
+<!-- End of User's Upline -->
+
+
+<!-- User's Downline -->
+	
+	{{# if account.downline.account_name }}
+	<div class="col-md-8 col-xs-8 col-md-offset-2 col-xs-offset-2">
+			<div class="well downline">
+				<h3 class="text-center"><span class="fa fa-office"></span>
+				<strong>Your Downline is</strong>: {{ account.downline.user_name }} 
+				</h3>
+
+					<p>
+
+						<strong>Bank</strong>: {{ account.downline.bank_name }}<br>
+						<strong>Account Name</strong>: {{ account.downline.account_name }}<br>
+						<strong>Account Number</strong>: {{ account.downline.account_number }}<br>
+						<strong>Phone Number</strong>: {{ account.downline.phone_number }}<br>
+						<strong>Plan</strong>: {{ account.downline.plan }}<br>
+						<strong>To Pay You Before</strong>: {{ account.downline.time }}<br>
+						<strong>Message</strong>: {{ account.downline.message }}<br>
+
+						{{# if account.downline.confirmed }}
+						<strong>Confirmed</strong>: {{ account.downline.confirmed }}<br>
+						{{else}}
+						{{/if}}
+
+					</p>
+
+						
+					<!-- Confirmation Button links to a page to confirm a downline -->
+					{{# if account.downline.confirm }}
+					{{ else }}
+					<dir class="text-center">
+						<a href="/user/confirm-downline" class="btn btn-success btn-lg">
+						<span class="fa fa-unlock"></span>
+						<strong>Confirm</strong>
+						</a>
+					</dir>
+					{{/if}}
+
+					{{# if account.downline.msg_1 }}
+					<div class="alert alert-success alert-dismissible" role="alert">
+					    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					    <span aria-hidden="true">&times;</span></button>
+					    <strong>NOTE:</strong> {{ account.downline.msg_1 }}
+  					</div>
+  					{{ else }}
+  					{{/if}}
+
+  					{{# if account.downline.msg_2 }}
+  					<div class="alert alert-warning alert-dismissible" role="alert">
+					    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					    <span aria-hidden="true">&times;</span></button>
+					    <strong>NOTE:</strong> {{ account.downline.msg_2 }}
+  					</div>
+  					{{ else }}
+  					{{/if}}
+
+  					{{# if account.downline.msg_3 }}
+  					<div class="alert alert-danger alert-dismissible" role="alert">
+					    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					    <span aria-hidden="true">&times;</span></button>
+					    <strong>NOTE:</strong> {{ account.downline.msg_3 }}
+  					</div>
+  					{{ else }}
+  					{{/if}}
+
+			</div>
+	</div>
+	{{ else }}
+	{{/if}}
+<!-- End of User's Downline -->
+
+</div><!-- End Of Upline/Downline Row -->

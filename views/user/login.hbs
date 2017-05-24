@@ -1,0 +1,52 @@
+<head>
+	<style type="text/css">
+		body {
+			background-image: none;
+			background-color: #b94cb9;
+			/*font-family: 'Satisfy', Courier, monospace;*/
+		}
+		div>p>a {
+			color: white;
+
+		}
+	</style>
+</head>
+<div class="container">
+<div class="col-sm-4 col-sm-offset-4">
+
+<div class="well" style="color: orange; background-color: purple; outline-color: purple">
+	<h1><span class="fa fa-sign-in"></span> Login</h1>
+
+	 {{#if hasErrors}} 
+		<div class="alert alert-danger">
+			{{# each messages}}
+				<p>{{this}}</p>
+			{{/each}}
+		</div>
+	 {{/if}}
+
+	<!-- LOGIN FORM -->
+	<form action="/user/login" method="post">
+		<div class="form-group">
+			<label for="email">Email</label>
+			<input type="text" class="form-control" name="email" required>
+		</div>
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" id="password" class="form-control" name="password" required>
+		</div>
+
+		<button type="submit" class="btn btn-warning btn-lg">Login</button>
+	</form>
+
+	<hr>
+
+	<div class="text-center">
+		<p>If you don't have an account, then <a href="/user/signup">Signup</a></p>
+		<p>Or return to <a href="/inside">home</a>.</p>
+	</div>
+
+</div>
+
+</div>
+</div>

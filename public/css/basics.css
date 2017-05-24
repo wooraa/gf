@@ -1,0 +1,85 @@
+p
+{
+	color: orange;
+	outline-color: darkorange;
+	font-family: serif;
+	font: inherit;
+  /*text-shadow: -1px 2px 10px #0e0e0e, 9px 6px 18em orangered,
+   0px -1px 0em orangered;*/
+  
+}
+
+body {
+  background: transparent url("/images/white_01.jpg") no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  font-family: "Simplify", Courier, monospace;
+}
+
+
+.white-with-blue-shadow {
+    text-shadow: -1px 2px 10px #0e0e0e, 9px 6px 18em orangered, 0px -1px 0em orangered;
+    color: white;
+}
+
+.col-sm-6 .col-md-4.thumbnail img {
+  max-height: 50px;
+}
+
+.thumbnail .description {
+    color: #fffff0;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+
+/*   */
+div>div .orangeT {
+  color: orange ! important;
+  background-color: purple;
+}
+
+.jumbotron h1 {
+  color: orange;
+  outline-color: orangered;
+  /*text-shadow: -1px 2px 10px #0e0e0e, 9px 6px 18em orangered,
+   0px -1px 0em orangered;*/
+}
+
+.mybtn {
+  color: orange;
+  background-color: purple;
+  border-color: transparent;
+}
+
+.mynav {
+  color: orange ! important;
+  background-color: purple;
+  border-color: transparent;
+}
+
+li>a {
+  color: orange ! important;
+}
+/**
+font-family: 'Cookie', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Fascinate Inline', cursive;
+font-family: 'Jim Nightshade', cursive;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Lobster Two', cursive;
+font-family: 'Lora', serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Sigmar One', cursive;
+font-family: 'Vollkorn', serif;
+**/

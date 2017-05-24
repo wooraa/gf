@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <style type="text/css">
+    body {
+      padding-top: 0px;
+      background-image: none;
+      background-color: darkgrey;
+      font-weight: 20px;
+      color: brown;
+    }
+    nav {
+      display: none;
+    }
+    .list {
+      background-color: skyblue;
+      color: brown ! important;
+    }
+    p {
+      background-color: skyblue;
+      color: brown ! important;
+    }
+  </style>
+</head>
+
+   <div class="row text-center">
+   {{# if orders }}
+     <div class="col-md-8 col-md-offset-2">
+       <h5 class="text-center">Active Plan</h5>
+       {{# each orders }}
+       <div class="panel panel-default list">
+         <div class="panel-body list">
+           <ul class="list-group ">
+             {{# each this.items }}
+             <li class="list-group-item">
+               <span class="badge">{{! this.price }}</span>
+               {{ this.item.name }} <!--  this.qty | Units  -->
+             </li>
+             {{/each}}
+           </ul>
+         <p>{{ this.created_at }}</p>
+         </div>
+         <!-- <div class="panel-footer">
+           <strong>
+           Total: N{{! this.choice.totalPrice }}
+           </strong>
+         </div> -->
+       </div>
+       {{/each}}
+     </div>
+     {{else}}
+     <h3>You have not chosen a plan.<br>
+      Click on the plans link to pick a plan.
+     </h3>
+     {{/if}}
+   </div>
+

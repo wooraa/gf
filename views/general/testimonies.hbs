@@ -1,0 +1,124 @@
+
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: orange;
+    background-color: black;
+    background-image: none;
+}
+
+/*.columns {
+    float: left;
+    width: 33.3%;
+    padding: 8px;
+}*/
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+    background-color: purple;
+    color: white;
+    font-size: 18px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+.price .grey {
+    background-color: #eee;
+    font-size: 18px;
+}
+
+.btn {
+    background-color: purple;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+li a .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: orange;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+li span {
+    color: black;
+}
+
+.dark {
+    color: grey;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+}
+
+.col-xs-8 {
+    padding-bottom: 10px;
+}
+h3 a {
+    text-decoration: none;
+    color: orange;
+}
+h3 a:focus, h3 a:hover {
+    color: purple;
+    text-decoration: none;
+}
+.grey a:focus, .grey a:hover {
+    color: purple;
+    text-decoration: none;
+}
+
+</style>
+</head>
+
+<h2 style="text-align:center" class="dark">Testimonies from Grafunders</h2>
+<hr>
+<!-- <h3 style="text-align:center" class="dark">If you have a testimony go to the "contact admin" link while logged in.</h3> -->
+
+{{# each testimony }}
+    <div class="row">
+    {{# each this }}
+    <div class="col-xs-8 col-md-8 col-xs-offset-2 col-md-offset-2">
+      <ul class="price">
+
+        <li class="header"><span class="header">Date: </span>{{ this.content.date }}</li>
+
+        <li class="grey"><span class="black">User-Name: </span>{{ this.content.user_name }}</li>
+
+        <li class="grey"><span class="black">Testimony: </span>{{ this.content.body }}</li>
+
+      </ul>
+    </div>
+    {{/each}}
+    </div>
+{{/each}}
+

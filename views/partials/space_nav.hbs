@@ -1,0 +1,42 @@
+<head>
+    <style type="text/css">
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<nav class="navbar navbar-default mynav navbar-fixed">
+    <div class="container-fluid">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header orangeT">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <!-- <span class="icon-bar"></span> -->
+                <i class="fa fa-user"></i>
+                <!-- <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> -->
+            </button>
+            {{# if account.details }}
+            <i class="navbar-brand orangeT" style="font-size: 20px;">
+            <strong>Welcome</strong>: 
+            {{ account.details.account_name }}
+            </i>
+            {{ else }}
+            <i class="navbar-brand orangeT" style="font-size: 20px;">
+            {{ user.local.email }}
+            </i>
+            {{/if}}
+
+            <i></i>
+            <div class="navbar-header">
+            <i class="navbar-brand orangeT" style="font-size: 20px;">
+            <a href="/plans" style="hover: text-decoration; color: orange">Plans</a>
+            </i>
+            </div>
+
+        </div>
+
+    </div><!-- /.container-fluid -->
+</nav>

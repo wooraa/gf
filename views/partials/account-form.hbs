@@ -1,0 +1,51 @@
+<!-- <h2>Modal Signup Form</h2> -->
+
+<!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button> -->
+
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+
+  <form method="post" class="modal-content animate" action="/p2p-choose">
+    <div class="container">
+
+      <label><b>Bank Name</b></label>
+      <input type="text" placeholder="Enter Bank Name" name="bank_name" required>
+
+      <label><b>Account Name</b></label>
+      <input type="text" placeholder="Enter Account Name" name="account_name" required>
+
+      <label><b>Account Number</b></label>
+      <input type="text" placeholder="Enter Account Number" name="account_number" required>
+
+      <label><b>Phone Number</b></label>
+      <input type="text" placeholder="Enter Account Phone Number" name="phone_number" required>
+
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email Address" name="account_email" required>
+
+      <label><b>Referral</b></label>
+      <input type="text" placeholder=" 81889hnj9828ss7sw92hj" name="referral" required>
+
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Add Details</button>
+      </div>
+
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>

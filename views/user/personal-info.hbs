@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<title>Registration | Additional details</title>
+	{{> head }}
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<style>
+		body { padding-top:80px; }
+		p 	 {color: default; font-size: 17px;}
+	</style>
+</head>
+<body>
+<div class="container">
+<div class="col-sm-6 col-sm-offset-3">
+
+	<h1><span class="fa fa-sign-in"></span> Personal Info</h1>
+
+	 {{#if hasErrors}}
+		<div class="alert alert-danger">
+			{{# each messages}}
+				<p>{{this}}</p>
+			{{/each}}
+		</div>
+	 {{/if}}
+
+	<!-- ADDITIONAL INFORMATION FORM -->
+	<form action="/account" method="post">
+		<div class="form-group">
+			<label>Fist Name</label>
+			<input type="text" class="form-control" name="first_name">
+		</div>
+		<div class="form-group">
+			<label>Surname</label>
+			<input type="text" class="form-control" name="surname">
+		</div>
+				<div class="form-group">
+			<label>Phone Number</label>
+			<input type="text" class="form-control" name="surname">
+		</div>
+
+		<button type="submit" class="btn btn-success btn-lg">Add details</button>
+	</form>
+
+	<hr>
+
+	<p>Want to go back? <a href="/main-page">Back to main page</a></p>
+	<p>Or go <a href="/">home</a>.</p>
+
+
+</div>
+</div>
+</body>
+</html>

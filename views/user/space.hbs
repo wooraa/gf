@@ -1,0 +1,139 @@
+<head>
+	<style type="text/css">
+		body {
+			background-color: black;
+			background-image: none;
+			padding-bottom: 20px;
+		}
+		/*.Frame-container {
+		  position: relative;
+		  padding-bottom: 56.25%;
+		  padding-top: 30px;
+		  height: 0;
+		  overflow: hidden;
+		}*/
+		/*.Frame-container iframe {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		}*/
+		.info {
+			background-color: purple;
+		}
+		.upline {
+			background-color: purple;
+		}
+
+		.downline {
+			background-color: purple;
+		}
+		h3 {
+			color: orange;
+		}
+		iframe {
+			background-color: skyblue;
+			/*margin-left: 0px;*/
+		}
+		.eyeframe {
+			/*margin-left: 0px;*/
+		}
+	</style>
+</head>
+<body>
+
+
+{{! > space_nav }} <!-- The main navigation bar, static-top-fixed -->
+
+ <!--The left aligned profile menu nav -->
+
+<!-- 	<div class="page-header text-center" style="">
+		<h1><span class="fa fa-user"></span> My Dash</h1>
+	</div> --><!-- Center positioned title on top of page -->
+
+
+<!-- <div class="container-fluid"> -->
+
+<!-- <dir class="row eyeframe"> -->
+<div class="text-center">
+	<iframe style="height: 10em; width: 18em;" src="/user/profile/"></iframe>
+</div>
+<!-- </dir> -->
+
+
+
+<div class="row user-info">
+	<div class="col-xs-10 col-md-8 col-xs-offset-1 col-md-offset-2">
+
+			{{# if message }} 
+			<div class="alert alert-success text-center">
+				{{# each message}}
+					<h4>{{this}}</h4>
+				{{/each}}
+			</div>
+		 	{{/if}}
+
+		 	{{# if account.details.note }}
+		 	<div class="alert alert-danger alert-dismissible" role="alert">
+			    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    <span aria-hidden="true">&times;</span></button>
+			    <strong>NOTE:</strong> {{ account.details.note }}
+			</div>
+			{{ else }}
+			{{/if}}
+
+			<div class="well info">
+				<h3 class="text-center"><span class="fa fa-office"></span>
+				{{ account.details.user_name }} 
+				</h3>
+
+				{{# if account._id }}
+					<p>
+
+						<strong>Bank</strong>: {{ account.details.bank_name }}<br>
+						<strong>Account Name</strong>: {{ account.details.account_name }}<br>
+						<strong>Account Number</strong>: {{ account.details.account_number }}<br>
+						<strong>Phone Number</strong>: {{ account.details.phone_number }}<br>
+						<strong>email</strong>: {{ user.local.email }}<br>
+						<strong>Date Joined</strong>: {{ account.created_at }}<br>
+
+					</p>
+
+
+					{{# if account.downline.msg_1 }}
+					<div class="alert alert-success alert-dismissible" role="alert">
+					    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					    <strong>NOTE:</strong> {{ account.downline.msg_1 }}
+  					</div>
+  					{{ else }}
+  					{{/if}}
+
+  					{{# if account.downline.msg_2 }}
+  					<div class="alert alert-warning alert-dismissible" role="alert">
+					    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					    <strong>NOTE:</strong> {{ account.downline.msg_2 }}
+  					</div>
+  					{{ else }}
+  					{{/if}}
+
+  					{{# if account.downline.msg_3 }}
+  					<div class="alert alert-danger alert-dismissible" role="alert">
+					    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					    <strong>NOTE:</strong> {{ account.downline.msg_3 }}
+  					</div>
+  					{{ else }}
+  					{{/if}}
+
+				{{ else }}
+				{{/if}}
+
+			</div>
+	</div>
+</div><!-- End of account.details row -->
+
+{{> upanddown }}
+
+<!-- </div> --><!-- End of Container-fluid -->
+
+</body>

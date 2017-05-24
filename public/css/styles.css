@@ -1,0 +1,30 @@
+p
+{
+	color:#fffff0;
+	outline-color: #4c4040;
+	font-family: serif;
+	font:small-caption;
+
+}
+
+body {
+  background: transparent url("/images/img_04.jpg") no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100%;
+  height: 500px;
+}
+
+.thumbnail img {
+  max-height: 150px;
+}
+
+.thumbnail .description {
+    color: #7f7f7f;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 16px;
+}

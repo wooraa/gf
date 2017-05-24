@@ -1,0 +1,65 @@
+<head>
+	<style type="text/css">
+		body {
+			padding-top: 20px;
+			color: orange;
+			background-image: none;
+			background-color: #b94cb9;
+		}
+		nav {
+			display: none;
+		}
+	</style>
+</head>
+
+<div class="container">
+<div class="col-sm-6 col-sm-offset-3">
+	<div class="well" style="color: ; background-color: purple; outline-color: purple;">
+
+	<h3 class="text-center"><span class="fa fa-file"></span> Let's know more about you.</h3>
+
+
+	<!-- LOGIN FORM -->
+	<form action="/user/account-form" method="post">
+
+			<div class="form-group">
+			<label><b>Bank Name</b></label>
+			<input type="text" placeholder="Bank Name" class="form-control" name="bankName" required>
+			</div>
+
+			<div class="form-group">
+			<label><b>Account Name</b></label>
+			<input type="text" placeholder="Account Name" class="form-control" name="accountName" required>
+			</div>
+
+			<div class="form-group">
+			<label><b>Account Number</b></label>
+			<input type="text" placeholder="Account Number" class="form-control" name="accountNumber" required>
+			</div>
+
+			<div class="form-group">
+			<label><b>Phone Number</b></label>
+			<input type="text" placeholder="Phone Number" class="form-control" name="phoneNumber" required>
+			</div>
+
+			<!-- <label><b>Email</b></label>
+			<input type="text" placeholder="Email" class="form-control" name="email" required> -->
+
+			<div class="form-group">
+			<label><b>Username</b></label>
+			<input type="text" placeholder="Choose a Username" class="form-control" name="userName" required>
+			</div>
+
+			<div class="form-group">
+			<label><b>Referrer</b></label>
+			<input type="text" placeholder="Referrer's Username" class="form-control" name="referrer">
+			</div>
+
+		<button type="submit" class="btn btn-warning btn-lg text-center">Submit</button>
+
+	</form>
+
+
+	</div>
+</div>
+</div>

@@ -1,0 +1,62 @@
+
+<head>
+  <!-- Required meta tags -->
+   <style>
+      body {
+         padding-top:;
+         /*background: transparent url("/images/home_02.jpg") no-repeat top center fixed;*/
+         background-image: none;
+         background-color: black;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: 100%;
+         height: 500px;
+      }
+      .well {
+        background-color: purple;
+      }
+   </style>
+</head>
+  <body>
+
+  {{!> space_nav }}
+
+
+   {{# if plans }}
+       <div class="row">
+         <div class="col-xs-6 col-md-6 col-md-offset-3 col-xs-offset-3">
+         <div class="well">
+           <ul class="list-group">
+             {{# each plans }}
+             <li class="list-group-item">
+               <span class="badge">{{ this.qty }}</span>
+               <strong>{{ this.item.name }}</strong>
+               <span class="label label-success">{{! this.price }}</span>
+               <!-- <div class="btn-group">
+                 <button class="btn btn-primary btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Action
+                 <span class="caret"></span></button>
+                 <ul class="dropdown-menu">
+                   <li><a href="/reduce/{{this.item._id}}">Reduce by 1</a></li>
+                   <li><a href="/remove/{{this.item._id}}">Remove All</a></li>
+                 </ul>
+               </div> -->
+             </li>
+             {{/each}}
+           </ul>
+           </div>
+         </div>
+       </div>
+         {{> choice-submit }}
+       </div>
+   {{ else }}
+       <div class="row">
+         <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+           <h2>You have not chosen any plan. <br>
+           Go to the <a href="/plans">Plans</a> page and choose a plan.
+           </h2>
+         </div>
+       </div>
+   {{/if}}
+
+   </body>
